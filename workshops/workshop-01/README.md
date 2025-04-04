@@ -27,4 +27,5 @@ docker run -d \
 ```
 
 **Note:**
+- ไม่จำเป็นต้อง build image สามารถรันจากคำสั่งข้างต้นได้เลย
 - option `--network=host` เพื่อให้ container นั้นใช้ network ของ host ซึ่งจะทำให้ localhost:8080 และ localhost:8081 อ้างอิงไปยัง host จริง ๆ
