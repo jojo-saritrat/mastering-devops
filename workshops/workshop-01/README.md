@@ -20,7 +20,7 @@ docker run -it -d -p 8082:80 \
 
 # Running Load Balancer
 docker run -d \
-  --network=host
+  --network=host \
   -p 80:80 \
   -v $(pwd)/workshops/workshop-01/nginx.conf:/etc/nginx/conf.d/default.conf \
   nginx
