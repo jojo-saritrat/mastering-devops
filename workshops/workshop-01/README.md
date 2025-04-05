@@ -20,11 +20,12 @@ docker run -it -d -p 8082:80 \
 
 # Running Load Balancer
 docker run -d \
-  --network=host
+  --network=host \
   -p 80:80 \
   -v $(pwd)/workshops/workshop-01/nginx.conf:/etc/nginx/conf.d/default.conf \
   nginx
 ```
 
 **Note:**
+- ไม่จำเป็นต้อง build image ก่อน สามารถรันจากคำสั่งข้างบนได้เลย
 - option `--network=host` เพื่อให้ container นั้นใช้ network ของ host ซึ่งจะทำให้ localhost:8080 และ localhost:8081 อ้างอิงไปยัง host จริง ๆ
