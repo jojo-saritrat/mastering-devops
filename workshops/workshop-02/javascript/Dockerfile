@@ -29,5 +29,5 @@ RUN mkdir /tmp/ready
 # Expose port 8080 for the application
 EXPOSE 8080
 
-# Command to run the application
-CMD ["node","app.js"]
+# Set the entrypoint to the Javascript app
+ENTRYPOINT ["node","app.js"]
